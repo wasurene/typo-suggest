@@ -28,6 +28,11 @@ func main() {
 		os.Exit(1)
 	}
 
+	if *query == "" {
+		fmt.Println("Ошибка: не указан поисковый запрос")
+		os.Exit(1)
+	}
+
 	var result []Result
 
 	for i := range words {
